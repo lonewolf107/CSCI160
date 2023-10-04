@@ -1,0 +1,7 @@
+Time Complexity:
+The function iterates through the string s once, checking each character to see if it is an uppercase letter. 
+This operation takes constant time O(1) for each character. Since the string has n characters, the overall time complexity is O(n), where n is the length of the string.
+Space Complexity:
+The function uses a constant amount of extra space to store variables like wordCount and c, regardless of the size of the input string. Therefore, the space complexity is O(1).
+Time complexity: O(n)
+Space complexity: O(1)
