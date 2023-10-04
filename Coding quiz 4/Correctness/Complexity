@@ -1,2 +1,17 @@
-- Time Complexity: (O(n^2)) (worst-case and average-case), (O(n)) (Best Case)
-- Space Complexity: (O(1))
+Time Complexity:
+
+Best Case: When the input array is already sorted, the while loop inside the for loop doesn't run. 
+In this case, the time complexity is O(n), where n is the size of the array.
+  
+Worst Case: When the input array is sorted in reverse order, the while loop will run  
+(i) times for each (i) from 1 to n-1, making the time complexity O(n^2).
+
+Average Case: On average, the time complexity is also O(n^2).
+
+ Space Complexity:
+The algorithm sorts the array in-place, meaning it doesn't use any additional memory 
+that scales with the size of the input array. Therefore, the space complexity is O(1).
+
+
+- Time Complexity: O(n^2) (worst-case and average-case), O(n) (Best Case)
+- Space Complexity: O(1)
