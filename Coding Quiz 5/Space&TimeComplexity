@@ -1,0 +1,13 @@
+Space and Time Complexity  Mars exploration
+
+
+Time Complexity:
+Every character in the input string ’s’ is looped over exactly once by the function {marsExploration}. Consequently, the temporal complexity is O(n), where (n) is the input string (s)’s length.
+
+Space Complexity:
+
+The input string ’s’ has a space complexity of O(n).
+Because the  string this is expected has length fixed at three, its space complexity for storage is O(1).
+changedCount is a variable that utilizes O(1) constant space.
+Consequently, O(n) + O(1) + O(1) = O(n)
+Therefore, both the space and time complexity are O(n).
