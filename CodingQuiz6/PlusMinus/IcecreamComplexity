@@ -1,0 +1,5 @@
+For the `IceCreamParlor` code:
+
+**Time Complexity:** The main operation is selecting combinations of 3 flavors from a list of `n` flavors. This results in a cubic operation. Hence, the time complexity is `O(n^3)`.
+
+**Space Complexity:** The recursion depth is constant (3 levels) due to looking for combinations of 3 flavors, and a few arrays of fixed size are used. The largest space used is for the `costs` array which is of size `n`. Therefore, the space complexity is `O(n)`.
