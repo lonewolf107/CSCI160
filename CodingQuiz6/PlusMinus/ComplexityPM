@@ -1,0 +1,18 @@
+Plus minus complexity
+
+1.Time Complexity:
+
+The function iterates over each number in the arr list exactly once. The time complexity for this operation is O(n), where n is the number of elements in the arr.
+
+Calculating and printing the ratios involve constant time operations and hence take O(1) time.
+
+Overall, the dominant time complexity comes from iterating over the list. Thus, the Time Complexity is O(n).
+
+2. Space Complexity:
+
+The function uses constant extra space to store counters for positive, negative, and zero numbers (posCount, negCount, and zeroCount). 
+
+The ratios (posRatio, negRatio, zeroRatio) also take up constant space.
+
+No other data structures that scale with the input size are used in the function. Hence, the Space Complexity is O(1) (constant space).
+
