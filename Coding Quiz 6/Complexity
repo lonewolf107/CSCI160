@@ -1,0 +1,11 @@
+Complexity of Time: O(n^2)
+O(n^2) is the time complexity because of the nested loops. n-1 iterations make up the outer loop,
+where n is the length of the input list arr. In the worst scenario, the inner while loop might 
+execute for i iterations (where i is the outer loop's current index), resulting in an O(n^2) total time complexity.
+
+O(1) for space complexity
+Because the technique sorts the input list in-place rather than utilizing extra data structures that expand
+with the size of the input, the space complexity is O(1).
+
+
+
