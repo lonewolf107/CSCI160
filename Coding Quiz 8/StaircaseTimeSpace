@@ -1,0 +1,10 @@
+Time Complexity:
+The outer loop runs from i = 1 to i = n, making n iterations.
+Inside the outer loop, there are two inner loops. Both inner loops iterate from 1 to n for each value of i.
+Therefore, the time complexity of each inner loop is O(n).
+Since the inner loops are nested, the overall time complexity is O(n^2).
+
+Space Complexity:
+The space complexity is determined by the additional space used by the program, excluding the input.
+The program uses a constant amount of extra space for variables i, j, k, which does not depend on the input size.
+Therefore, the space complexity of the program is O(1), which means it has constant space complexity.
