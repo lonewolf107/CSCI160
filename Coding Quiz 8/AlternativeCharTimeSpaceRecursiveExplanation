@@ -1,0 +1,12 @@
+Time and Space Complexity (Recursive):
+
+Time Complexity: O(n), where n is the length of the input string s. In the worst case, the recursive function will visit each character in the string once.
+Space Complexity: O(n), as the recursive function call stack can grow linearly with the length of the string in the worst case.
+
+Explanation of Recursion:
+The alternatingCharacters function takes the input string s and starts the recursive process by calling countDeletions with an initial state.
+The countDeletions function is a recursive helper function that takes three parameters: the input string s, the current index (currentIndex), and the next index (nextIndex) to compare.
+In each recursive call, we check if the current character is the same as the next character. If they are the same, we increment the deletions count by 1.
+We then recursively call countDeletions with the next index (nextIndex) to continue comparing characters.
+The base case is when we reach the end of the string (nextIndex == s.length()), and we return 0 deletions.
+The final result is the sum of deletions counted during the recursive calls.
