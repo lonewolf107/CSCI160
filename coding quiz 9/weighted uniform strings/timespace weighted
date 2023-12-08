@@ -1,0 +1,5 @@
+Time Complexity: The time complexity is O(n + q), where n represents the length of the string, and q is the number of queries.
+ The program iterates through the string once and then conducts a constant-time lookup for each query.
+
+Space Complexity: The space complexity is O(n), mainly because of the HashSet that stores the weights.
+ In the worst-case scenario, it may need to store a unique weight for each character in the string.
