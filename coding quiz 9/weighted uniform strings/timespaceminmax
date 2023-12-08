@@ -1,0 +1,6 @@
+Time Complexity: The time complexity is O(n log n), with n representing the size of the input list. This is primarily because of the sorting operation, 
+which is the dominant factor in determining the overall time complexity. 
+While the subsequent iterations for summing elements contribute O(n), their impact is eclipsed by the sorting cost.
+
+Space Complexity: Assuming in-place sorting, the space complexity is O(1). 
+The extra space used for the `min` and `max` variables remains constant and does not increase with the size of the input list.
