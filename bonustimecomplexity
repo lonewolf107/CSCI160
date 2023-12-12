@@ -1,0 +1,35 @@
+To measure the time complexity of the given Java code, we can analyze the algorithm theoretically to understand how 
+the execution time scales with the size of the input. The code you provided is a dynamic programming solution for the Hackerland Radio Transmitters problem. 
+Let's break down the key components and analyze their time complexity:
+
+ 1. Sorting
+```java
+Collections.sort(x);
+```
+- The `Collections.sort()` method in Java typically uses a variant of the TimSort algorithm, which has a time complexity of O(n log n), 
+where `n` is the number of elements in the list.
+
+2. Dynamic Programming Calculation
+```java
+int[] dp = new int[n];
+Arrays.fill(dp, Integer.MAX_VALUE);
+dp[0] = 1;
+// ... loop to calculate dp[i] ...
+```
+- An array `dp` of size `n` is created and initialized.
+- The `Arrays.fill()` operation has a complexity of O(n), as it iterates through the entire array once.
+- The loop iterates `n` times, where `n` is the number of houses. Inside the loop, operations are performed which have constant time complexity (O(1)).
+
+Time Complexity Analysis
+- The sorting operation dominates the time complexity of this algorithm, with O(n log n).
+- The dynamic programming calculation iterates through the list once, adding an additional O(n) to the complexity.
+- Thus, the overall time complexity of the algorithm is the sum of these two parts: O(n log n) + O(n).
+
+Since O(n log n) is the dominant term, the overall time complexity of the algorithm is O(n log n).
+
+Space Complexity
+- The space complexity is primarily determined by the size of the dynamic programming array `dp`, which is O(n), where `n` is the number of houses.
+
+Measuring Time Complexity Practically
+To empirically measure the time complexity, you could run the program with various input sizes and record the execution time for each. Plotting these times against 
+the input sizes on a graph can give you a visual representation of how the algorithm scales, which should closely align with the theoretical O(n log n) complexity.
