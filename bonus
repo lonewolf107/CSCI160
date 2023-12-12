@@ -1,0 +1,63 @@
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+import java.util.*;
+
+class Result {
+
+    public static int hackerlandRadioTransmitters(List<Integer> x, int k) {
+        Collections.sort(x);
+        int n = x.size();
+        int[] dp = new int[n];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 1; // Base case: one transmitter for the first house
+
+        int lastTransmitterIndex = 0; // Tracks the last house where a transmitter was placed
+        for (int i = 1; i < n; i++) {
+            // Check if the current house can be covered by the last transmitter
+            if (x.get(i) <= x.get(lastTransmitterIndex) + k) {
+                dp[i] = dp[lastTransmitterIndex];
+            } else {
+                // Find the next house to place a transmitter
+                lastTransmitterIndex = i;
+                dp[i] = dp[i - 1] + 1;
+            }
+        }
+
+        return dp[n - 1];
+    }
+}
+
+public class Solution {
+     public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int n = Integer.parseInt(firstMultipleInput[0]);
+        int k = Integer.parseInt(firstMultipleInput[1]);
+
+        List<Integer> x = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+
+        int result = Result.hackerlandRadioTransmitters(x, k);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
+
+
+
